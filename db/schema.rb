@@ -16,8 +16,9 @@ ActiveRecord::Schema.define(version: 20150522124200) do
   create_table "hangmen", force: :cascade do |t|
     t.string   "word"
     t.string   "suggestion"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer  "lives",      default: 6
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
   end
 
 end
